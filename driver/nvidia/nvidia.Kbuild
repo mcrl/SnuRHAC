@@ -1,0 +1,122 @@
+###########################################################################
+# Kbuild fragment for nvidia.ko
+###########################################################################
+
+#
+# Register the conftests needed by nvidia.ko
+#
+
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += hash__remap_4k_pfn
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += set_pages_uc
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += list_is_first
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += set_memory_uc
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += set_memory_array_uc
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += set_pages_array_uc
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += acquire_console_sem
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += console_lock
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += ioremap_cache
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += ioremap_wc
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += acpi_walk_namespace
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += sg_alloc_table
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += pci_get_domain_bus_and_slot
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += get_num_physpages
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += efi_enabled
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += pde_data
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += proc_remove
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += pm_vt_switch_required
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += xen_ioemu_inject_msi
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += phys_to_dma
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += get_dma_ops
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += dma_attr_macros
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += dma_map_page_attrs
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += write_cr4
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += of_get_property
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += of_find_node_by_phandle
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += of_node_to_nid
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += pnv_pci_get_npu_dev
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += of_get_ibm_chip_id
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += node_end_pfn
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += pci_bus_address
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += pci_stop_and_remove_bus_device
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += pci_remove_bus_device
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += register_cpu_notifier
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += cpuhp_setup_state
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += dma_map_resource
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += backlight_device_register
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += get_backlight_device_by_name
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += timer_setup
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += pci_enable_msix_range
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += kernel_read_has_pointer_pos_arg
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += kernel_write
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += kthread_create_on_node
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += of_find_matching_node
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += dev_is_pci
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += dma_direct_map_resource
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += tegra_get_platform
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += tegra_bpmp_send_receive
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += flush_cache_all
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += vmf_insert_pfn
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += jiffies_to_timespec
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += ktime_get_raw_ts64
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += ktime_get_real_ts64
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += full_name_hash
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += hlist_for_each_entry
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += pci_enable_atomic_ops_to_root
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += vga_tryget
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += pgprot_decrypted
+NV_CONFTEST_FUNCTION_COMPILE_TESTS += iterate_fd
+
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_gpl_of_node_to_nid
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_gpl_sme_active
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_swiotlb_map_sg_attrs
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_swiotlb_dma_ops
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present___close_fd
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_get_unused_fd
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_get_unused_fd_flags
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_screen_info
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_nvhost_get_default_device
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_nvhost_syncpt_unit_interface_get_byte_offset
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_nvhost_syncpt_unit_interface_get_aperture
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_tegra_dce_register_ipc_client
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_tegra_dce_unregister_ipc_client
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_tegra_dce_client_ipc_send_recv
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_dram_clk_to_mc_clk
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_get_dram_num_channels
+NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_present_tegra_dram_types
+
+NV_CONFTEST_TYPE_COMPILE_TESTS += acpi_op_remove
+NV_CONFTEST_TYPE_COMPILE_TESTS += outer_flush_all
+NV_CONFTEST_TYPE_COMPILE_TESTS += file_operations
+NV_CONFTEST_TYPE_COMPILE_TESTS += file_inode
+NV_CONFTEST_TYPE_COMPILE_TESTS += kuid_t
+NV_CONFTEST_TYPE_COMPILE_TESTS += dma_ops
+NV_CONFTEST_TYPE_COMPILE_TESTS += swiotlb_dma_ops
+NV_CONFTEST_TYPE_COMPILE_TESTS += noncoherent_swiotlb_dma_ops
+NV_CONFTEST_TYPE_COMPILE_TESTS += vm_fault_has_address
+NV_CONFTEST_TYPE_COMPILE_TESTS += backlight_properties_type
+NV_CONFTEST_TYPE_COMPILE_TESTS += vm_insert_pfn_prot
+NV_CONFTEST_TYPE_COMPILE_TESTS += vmf_insert_pfn_prot
+NV_CONFTEST_TYPE_COMPILE_TESTS += address_space_init_once
+NV_CONFTEST_TYPE_COMPILE_TESTS += vm_ops_fault_removed_vma_arg
+NV_CONFTEST_TYPE_COMPILE_TESTS += vmbus_channel_has_ringbuffer_page
+NV_CONFTEST_TYPE_COMPILE_TESTS += device_driver_of_match_table
+NV_CONFTEST_TYPE_COMPILE_TESTS += device_of_node
+NV_CONFTEST_TYPE_COMPILE_TESTS += node_states_n_memory
+NV_CONFTEST_TYPE_COMPILE_TESTS += kmem_cache_has_kobj_remove_work
+NV_CONFTEST_TYPE_COMPILE_TESTS += sysfs_slab_unlink
+NV_CONFTEST_TYPE_COMPILE_TESTS += proc_ops
+NV_CONFTEST_TYPE_COMPILE_TESTS += timespec64
+NV_CONFTEST_TYPE_COMPILE_TESTS += vmalloc_has_pgprot_t_arg
+NV_CONFTEST_TYPE_COMPILE_TESTS += acpi_fadt_low_power_s0
+NV_CONFTEST_TYPE_COMPILE_TESTS += mm_has_mmap_lock
+NV_CONFTEST_TYPE_COMPILE_TESTS += pci_channel_state
+
+NV_CONFTEST_GENERIC_COMPILE_TESTS += dom0_kernel_present
+NV_CONFTEST_GENERIC_COMPILE_TESTS += nvidia_vgpu_hyperv_available
+NV_CONFTEST_GENERIC_COMPILE_TESTS += nvidia_vgpu_kvm_build
+NV_CONFTEST_GENERIC_COMPILE_TESTS += nvidia_grid_build
+NV_CONFTEST_GENERIC_COMPILE_TESTS += nvidia_grid_csp_build
+NV_CONFTEST_GENERIC_COMPILE_TESTS += get_user_pages
+NV_CONFTEST_GENERIC_COMPILE_TESTS += get_user_pages_remote
+NV_CONFTEST_GENERIC_COMPILE_TESTS += pm_runtime_available
+NV_CONFTEST_GENERIC_COMPILE_TESTS += vm_fault_t
