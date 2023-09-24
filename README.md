@@ -2,7 +2,7 @@
 A Runtime for Heterogeneous Accelerator Clusters with CUDA Unified Memory
 
 ## Software Manual
-https://aces.snu.ac.kr/software/snurhac/
+https://thunder.snu.ac.kr/?page_id=64&page=4
 
 ## Tested Environment
 | Component | Version |
